@@ -24,15 +24,14 @@ export default function Home() {
 
   const filterCarList = (brand: string) => {
     const filterList = carsOrgList.filter(
-      (item: any) => item.cardBrand === brand
+      (item: any) => item.carBrand == brand
     );
-
     setCarsList(filterList);
   };
 
   const orderCarList = (order: any) => {
     const sortedData = [...carsList].sort((a, b) =>
-      order === -1 ? a.price - b.price : b.price - a.price
+      order == -1 ? a.price - b.price : b.price - a.price
     );
     setCarsList(sortedData);
   };
