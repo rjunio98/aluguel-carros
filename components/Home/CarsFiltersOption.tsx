@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-function CarsFiltersOption() {
+function CarsFiltersOption({ carsList }: any) {
+  const [brandList, setBrandList] = useState<any>([]);
+  const BrandSet = new Set();
+
+  useEffect(() => {
+    if (carsList) {
+      filterCarList();
+    }
+  }, [carsList]);
+
+  const filterCarList = () => {
+    carsList.forEach((element: any) => {
+      BrandSet.add(element.carBrand);
+    });
+
+    setBrandList(Array.from(BrandSet));
+  };
+
   return (
     <div className="mt-10 flex items-center justify-between">
       <div>
@@ -27,9 +44,10 @@ function CarsFiltersOption() {
           >
             Manufactural
           </option>
-          <option>Honda</option>
-          <option>BMW</option>
-          <option>Toyota</option>
+
+          {brandList.map((brand: string, index: number) => (
+            <option key={index}>{brand}</option>
+          ))}
         </select>
       </div>
     </div>
