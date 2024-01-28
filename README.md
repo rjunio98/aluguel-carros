@@ -6,7 +6,7 @@ Este projeto consiste em um aplicativo de aluguel de carros desenvolvido com as 
 ## Funcionalidades Principais
 - Exibição de uma variedade de carros disponíveis para aluguel.
 - Possibilidade de visualizar detalhes específicos de cada carro.
-- Sistema de reserva de carros.
+- Sistema de reserva de carros com o HyGraph.
 - Interface intuitiva e responsiva para uma experiência do usuário otimizada.
 
 ## Tecnologias Utilizadas
