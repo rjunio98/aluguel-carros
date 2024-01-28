@@ -22,11 +22,22 @@ export default function Home() {
     setCarsOrgList(result?.carLists);
   };
 
+  const filterCarList = (brand: string) => {
+    const filterList = carsOrgList.filter(
+      (item: any) => item.cardBrand === brand
+    );
+
+    setCarsList(filterList);
+  };
+
   return (
     <div className="p-5 sm:px-10 md:px-20">
       <Hero />
       <SearchInput />
-      <CarsFiltersOption carsList={carsOrgList} />
+      <CarsFiltersOption
+        carsList={carsOrgList}
+        setBrand={(value: string) => filterCarList(value)}
+      />
       <CarsList carsList={carsList} />
     </div>
   );
