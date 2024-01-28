@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function CarsFiltersOption({ carsList }: any) {
+function CarsFiltersOption({ carsList, setBrand }: any) {
   const [brandList, setBrandList] = useState<any>([]);
   const BrandSet = new Set();
 
@@ -37,7 +37,10 @@ function CarsFiltersOption({ carsList }: any) {
           <option>Max to Min</option>
         </select>
 
-        <select className="select select-bordered w-full md:block max-w-xs hidden">
+        <select
+          className="select select-bordered w-full md:block max-w-xs hidden"
+          onChange={(e) => setBrand(e.target.value)}
+        >
           <option
             disabled
             selected
