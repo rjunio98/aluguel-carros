@@ -30,7 +30,6 @@ function Form({ car }: any) {
       });
     }
   }, [car]);
-
   const getStoreLocation_ = async () => {
     const resp: any = await getStoreLocations();
     setStoreLocation(resp?.storesLocations);
