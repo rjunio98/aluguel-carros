@@ -9,6 +9,8 @@ Este projeto consiste em um aplicativo de aluguel de carros desenvolvido com as 
 - Sistema de reserva de carros com o HyGraph.
 - Interface intuitiva e responsiva para uma experiência do usuário otimizada.
 
+[<img src="./design/aluguel-carros.gif" alt="gif do projeto">]
+
 ## Tecnologias Utilizadas
 - **React**: Biblioteca JavaScript para a construção da interface do usuário.
 - **Tailwind CSS**: Framework de estilo utilitário para a estilização do aplicativo.
